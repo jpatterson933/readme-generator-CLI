@@ -16,7 +16,7 @@ console.log(process.argv)
 //Project Title
 //Description - Description 
 //Installation Instructions - Installation
-//Usage Information - Usage
+//Usage Information - Usage - instruct people how to use your project after it is installed
 //Contribution Guidelines - Contributing
 //Test Instructions - Test
 //--INFORMATION ENTERED WILL BE ADDED TO THE CORRESPONDING README SECTIONS
@@ -38,20 +38,61 @@ inquirer
     },
     {
       type: 'input',
-      message: 'Please Enter a quick Description of your Project?',
+      message: 'Please Enter a quick description of your Project: ',
       name: 'description',
     },
     {
       type: 'input',
-      message: 'What are the Installation Instructions',
-      name: 'install-instruct',
+      message: 'What are the Installation Instructions: ',
+      name: 'install',
     },
     {
-        //CONTINUE HERE IN THE MORNING
+      type: 'input',
+      message: 'Please explain how your application can be used: ',
+      name: 'usage'
+    },
+    {
+      type: 'input',
+      message: 'Please enter a list of test instructions: ',
+      name: 'test',
+    },
+    {
+      type: 'checkbox',
+      message: 'please select a license',
+      name: 'license',
+      choices: [
+        {
+          key: 'license1',
+          value: 'this is a license',
+        },
+        {
+          key: 'license2',
+          value: 'license for number 2',
+        },
+      ],
+    },
+    {
+      type: 'input',
+      message: 'Please enter your GitHub username: ',
+      name: 'username',
+    },
+    {
+      type: 'input',
+      message: 'What is your email?',
+      name: 'email',
+    },
+    {
+      type: 'input',
+      message: 'Please enter the applications URL: ',
+      name: 'website'
+    },
+    {
+      type: 'input',
+      message: 'Please enter your gihub repository URL: ',
+      name: 'repository',
     }
   ])
   .then((response) =>
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('This is not working')
+
+    console.log(response)
   );
