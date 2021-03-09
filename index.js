@@ -9,7 +9,7 @@ inquirer
     {
       type: 'input',
       message: 'What is your project title?',
-      name: 'projectTitle',
+      name: 'title',
     },
     {
       type: 'input',
@@ -67,7 +67,7 @@ inquirer
     },
     {
       type: 'input',
-      message: 'Please enter the applications URL: ',
+      message: 'Please enter the full applications URL: ',
       name: 'website'
     },
     {
@@ -77,13 +77,45 @@ inquirer
     }
   ])
   .then((response) => {
-    const readme = 
-    `# ${response.projectTitle} <br>
-    ### Description: ${response.description} <br>
-    ### Installation Instructions: ${response.install}`
+    const readme = `
+# ${response.title}
 
+## Notice ${response.license} licenseBadge
 
+This application is covered under ${response.license} License
+License Detail: InsertLicenseDetails
 
+# Table of Contents
+1. [Description](#description)
+2. [Installation](#installation-instructions)
+3. [Usage](#application-usage)
+4. [Contribution Guidelines](#contribution-guidelines)
+5. [Testing](#testing-instrutions)
+6. [Questions](#questions)
+
+## Description
+${response.description}
+
+## Installation Instructions
+${response.install}
+
+## Application Usage
+${response.usage}
+
+## Contribution Guidelines
+${response.contribution}
+
+## Testing Instrutions
+${response.test}
+
+# Questions
+If you have any questions that have not been answered, please send me an email: insertemailhere
+
+## Checkout My GitHub!
+
+### [${response.username}](https://github.com/${response.username})
+### [Live Application](${response.website})
+### [GitHub Repository](${response.repository})`
 
 
       fs.writeFile('readme.md', readme, err => {
