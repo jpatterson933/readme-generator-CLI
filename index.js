@@ -1,6 +1,8 @@
 console.log("testing node")
 console.log(process.argv)
 
+const fs = require('fs');
+
 
 //Directions and pseudocode
 
@@ -34,26 +36,26 @@ inquirer
     {
       type: 'input',
       message: 'What is your project title?',
-      name: 'project-title',
+      name: 'projectTitle',
     },
     {
       type: 'input',
-      message: 'Please Enter a quick description of your Project: ',
+      message: 'Enter a Project Description: ',
       name: 'description',
     },
     {
       type: 'input',
-      message: 'What are the Installation Instructions: ',
+      message: 'Enter Installation Instructions: ',
       name: 'install',
     },
     {
       type: 'input',
-      message: 'Please explain how your application can be used: ',
+      message: 'Explain Application Usage: ',
       name: 'usage'
     },
     {
       type: 'input',
-      message: 'Please enter a list of test instructions: ',
+      message: 'Testing Instructions: ',
       name: 'test',
     },
     {
@@ -62,12 +64,16 @@ inquirer
       name: 'license',
       choices: [
         {
-          key: 'license1',
-          value: 'this is a license',
+          key: '1',
+          value: 'BSD',
         },
         {
-          key: 'license2',
-          value: 'license for number 2',
+          key: '2',
+          value: 'MIT',
+        },
+        {
+          key: '3',
+          value: 'GPL',
         },
       ],
     },
@@ -92,7 +98,21 @@ inquirer
       name: 'repository',
     }
   ])
-  .then((response) =>
+  .then((response) => {
+    const readme = 
+    `# ${response.projectTitle} <br>
+    ### Description: ${response.description} <br>
+    ### Installation Instructions: ${response.install}`
 
-    console.log(response)
-  );
+
+
+
+
+      fs.writeFile('readme.md', readme, err => {
+        err ? console.log(err) : console.log("we did it");
+    })
+
+  });
+
+
+
