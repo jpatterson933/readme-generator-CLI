@@ -5,6 +5,8 @@ console.log(process.argv)
 const fs = require('fs');
 //our inquirer module pulled into our index.js followed by our prompts
 const inquirer = require('inquirer');
+
+//our prompts
 inquirer
   .prompt([
     {
@@ -109,7 +111,7 @@ ${renderLicense(response.license)}
 ${maintain(response.maintain)}
 
 # Table of Contents
-1. [${response.license}](#license-information)
+1. [License ${response.license}](#license-information)
 2. [Description](#application-description)
 3. [Installation](#installation-instructions)
 4. [Usage](#application-usage)
@@ -180,7 +182,6 @@ If you have any questions that have not been answered, please send me an email: 
   });
   //function to generate license badge, uses switch statement and takes input from checkboxes through the lic parameter
   function renderLicense (lic) {
-    console.log(lic)
     switch (lic[0]) {
       case "MIT":
         badgeLink = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
@@ -213,15 +214,16 @@ If you have any questions that have not been answered, please send me an email: 
     }
   }
   //function to display a badge at the top of the readme of whether or not the application will be maintained
-  function maintain(m) {
-    switch(m[0]) {
-      case 'yes':
+  function maintain(main) {
+    console.log(main[0])
+    switch(main[0]) {
+      case 'Yes':
         badge = "[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)";
         return badge;
-      case 'no':
+      case 'No':
         badge = "[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)";
         return badge;
-      case 'never':
+      case 'Never':
         badge = "[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)";
         return badge;
       default:
