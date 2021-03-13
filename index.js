@@ -5,6 +5,7 @@ console.log(process.argv)
 const fs = require('fs');
 //our inquirer module pulled into our index.js followed by our prompts
 const inquirer = require('inquirer');
+const { checkServerIdentity } = require('tls');
 
 //our prompts
 inquirer
@@ -13,31 +14,79 @@ inquirer
       type: 'input',
       message: 'What is your project title?',
       name: 'title',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please enter a project title!");
+          return false;
+        }
+      }
     },
     {
       type: 'input',
       message: 'Enter a Project Description: ',
       name: 'description',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please enter a project description!");
+          return false;
+        }
+      }
     },
     {
       type: 'input',
       message: 'Enter Installation Instructions: ',
       name: 'install',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please enter installation instructions!");
+          return false;
+        }
+      }
     },
     {
       type: 'input',
       message: 'Explain Application Usage: ',
-      name: 'usage'
+      name: 'usage',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please explain application usage!");
+          return false;
+        }
+      }
     },
     {
       type: 'input',
       message: 'What are your contribution guidelines?',
       name: 'contribution',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please enter contribution guidelines!");
+          return false;
+        }
+      }
     },
     {
       type: 'input',
       message: 'Testing Instructions: ',
       name: 'test',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please enter testing instructions!");
+          return false;
+        }
+      }
     },
     {
       //our license prompt checkbox
@@ -58,6 +107,14 @@ inquirer
           value: 'GPL v3',
         },
       ],
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please choose a license!");
+          return false;
+        }
+      }
     },
     {
       //BONUS - will your application/site be maintainted? 
@@ -78,26 +135,67 @@ inquirer
           value: 'Never',
         },
       ],
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please choose if this project will be maintained!");
+          return false;
+        }
+      }
     },
     {
+      //somewhere here is where I should think about how to let the user choose if there are multiple contributors
       type: 'input',
       message: 'Please enter your GitHub username: ',
       name: 'username',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please enter your gitHub username!");
+          return false;
+        }
+      }
     },
     {
       type: 'input',
       message: 'What is your email?',
       name: 'email',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please enter your email!");
+          return false;
+        }
+      }
     },
     {
       type: 'input',
       message: 'Please enter the full applications URL: ',
-      name: 'website'
+      name: 'website',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please enter the applications website!");
+          return false;
+        }
+      }
     },
     {
       type: 'input',
       message: 'Please enter your gihub repository URL: ',
       name: 'repository',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please enter the applications repository url!");
+          return false;
+        }
+      }
     }
   ])
   //then our reponses to follow

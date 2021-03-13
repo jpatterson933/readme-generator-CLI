@@ -1,4 +1,4 @@
-# Readme Markdown File Generator
+# Legen of jackStrom
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -26,33 +26,31 @@ this software or any code within this application.
 
 # Application Description
 
-This application can generator a readme markdown for any project, any application, any place, any time!
+This is a mini project where I will work on the legend of jackStrom. He is a GOD trapped in a man's body trapped in my javascript.
 
 [Back to Top](#table-of-contents)
 
 # Installation Instructions
 
-Make sure you have VS code installed, Gitbash (or something similar). Once you have those, git clone the repository, open the terminal and make sure you type npm install to make sure the file is compatiable with your device software. Once that has been done you should be able to run the application. Any issues, please reach out to my email below.
+You can clone this repository.
 
 [Back to Top](#table-of-contents)
 
 # Application Usage
-[Application Demo](https://youtu.be/wAbhc1If1gs)
-First, make sure any existing readme's are deleted from the application before creating a new one. This is to ensure a new readme gets generated. Once everything in the installation has been installed continue by opening the terminal and typing node index.js <br>
-<br>
-Once that has been typed, answer each question thoroughly and when the final question is answered, a Readme will be generated and you can make minor adjustments from there like added media, gifs, images that help put your explanation of your project into more practical viewable terms but all styling will be done by the readme markdown generator.
+
+It is a fun game. To run on the terminal. I use gitBash and VS code. Anything similar will work. You will also need Node installed. Look on the website for more instructions.
 
 [Back to Top](#table-of-contents)
 
 # Contribution Guidelines
 
-This project does not require or need further contribution. 
+Contribute however you want! If it adds to the code, I will approve any pushes. Please leave comments on anything done.
 
 [Back to Top](#table-of-contents)
 
 # Testing Instrutions
 
-If you would like to create a test for this, please clone the repository and test away! If you would like to push that test into the current repository, please reach out to my email below or just push and see what happens!
+N/A
 
 [Back to Top](#table-of-contents)
 
@@ -62,11 +60,8 @@ If you have any questions that have not been answered, please send me an email: 
 
 ## Checkout My GitHub!
 
+[Back to Top](#table-of-contents)
 
 ### [jpatterson933](https://github.com/jpatterson933)
-### [Live Application](https://github.com/jpatterson933/readme-generator)
-### [GitHub Repository](https://github.com/jpatterson933/readme-generator)
-
-<br>
-
-[Back to Top](#table-of-contents)
+### [Live Application](https://github.com/jpatterson933/javascript-mini-fight-game)
+### [GitHub Repository](https://github.com/jpatterson933/javascript-mini-fight-game)
