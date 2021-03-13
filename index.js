@@ -146,6 +146,14 @@ inquirer
     },
     {
       //somewhere here is where I should think about how to let the user choose if there are multiple contributors
+      //you can start with a question that aks "would you like to enter a contributor?"
+      //on yes, they input their github, email, 
+      //then it asks, would you like to enter another contributor
+      //if not then it prints readme
+      //if yes, it repeats the process
+      //I should writ thie function outside of the prompts and call it -- don't forget you can also call multiple then
+      //funciotns with the then() chaining and inside the () is the parameter where our "responses" like but instead
+      //of using responses, make sure you use the most relevant name to the data you are using
       type: 'input',
       message: 'Please enter your GitHub username: ',
       name: 'username',
@@ -172,6 +180,7 @@ inquirer
       }
     },
     {
+      //will most likely want to put these higher up on the readme so the url application is clickable
       type: 'input',
       message: 'Please enter the full applications URL: ',
       name: 'website',
@@ -185,6 +194,9 @@ inquirer
       }
     },
     {
+      //can have this at the bottom since they will most likely be viewing the readme in github, however
+      //if the readme is used and posted outside of github or if that becomes osme type of commong practice
+      //make sure to make adjustments for the future
       type: 'input',
       message: 'Please enter your gihub repository URL: ',
       name: 'repository',
