@@ -145,6 +145,19 @@ inquirer
       }
     },
     {
+      type: 'input',
+      message: 'Are there any known issues or Errors?',
+      name: 'issues',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please enter testing instructions!");
+          return false;
+        }
+      }
+    },
+    {
       //somewhere here is where I should think about how to let the user choose if there are multiple contributors
       //you can start with a question that aks "would you like to enter a contributor?"
       //on yes, they input their github, email, 
@@ -227,7 +240,8 @@ ${maintain(response.maintain)}
 4. [Usage](#application-usage)
 5. [Contribution Guidelines](#contribution-guidelines)
 6. [Testing](#testing-instrutions)
-7. [Questions](#questions)
+7. [Known Issues/Errors](#known-issues/errors)
+8. [Questions](#questions)
 
 # License Information
 
@@ -267,6 +281,12 @@ ${response.contribution}
 # Testing Instrutions
 
 ${response.test}
+
+[Back to Top](#table-of-contents)
+
+# Known Issues/Errors
+
+${response.issues}
 
 [Back to Top](#table-of-contents)
 
