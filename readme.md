@@ -1,11 +1,11 @@
-# Readme Generator
+# Random Password Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)
 
 # Table of Contents
-1. [License ](#license-information)
+1. [License MIT](#license-information)
 2. [Description](#application-description)
 3. [Installation](#installation-instructions)
 4. [Usage](#application-usage)
@@ -27,25 +27,25 @@ this software or any code within this application.
 
 # Application Description
 
-An application that can generate Readmes for your projects.
+This application will allow users to generate a random passowrd between 8 and 128 characters and allows the users to increase the strenght of their password by including a variety of characters. 
 
 [Back to Top](#table-of-contents)
 
 # Installation Instructions
 
-Git Clone into a folder on your computer. Find the file location, open it up in VS code, type npm install into the terminal, type node index and the application should run.
+To install, git clone and open web browser to run. Run an npm install once cloned to ensure application runs smoothly with all dependencies. 
 
 [Back to Top](#table-of-contents)
 
 # Application Usage
 
-Used to generate readmes for any project, any place, any time.
+Use this application to generate random passwords.
 
 [Back to Top](#table-of-contents)
 
 # Contribution Guidelines
 
-N/A
+If you would like to contribute, please reach out to my email below. If you need help with explanation on some of the features, again, please reach out to my email.
 
 [Back to Top](#table-of-contents)
 
@@ -70,5 +70,5 @@ If you have any questions that have not been answered, please send me an email: 
 [Back to Top](#table-of-contents)
 
 ### [jpatterson933](https://github.com/jpatterson933)
-### [Live Application](https://github.com/jpatterson933/readme-generator)
-### [GitHub Repository](https://github.com/jpatterson933/readme-generator)
+### [Live Application](https://github.com/jpatterson933/ran_password_generator)
+### [GitHub Repository](https://github.com/jpatterson933/ran_password_generator)
