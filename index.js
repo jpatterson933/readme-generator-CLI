@@ -1,24 +1,23 @@
 //console log process.argv to understand our file system structure
 console.log(process.argv)
-
 //our file system module pulled into our index.js
 const fs = require('fs');
 //our inquirer module pulled into our index.js followed by our prompts
 const inquirer = require('inquirer');
-const { checkServerIdentity } = require('tls');
+
 
 //our prompts
 inquirer
   .prompt([
     {
       type: 'input',
-      message: 'What is your project title?',
+      message: 'Enter the name of your Application',
       name: 'title',
       validate: checkInput => {
         if (checkInput) {
           return true;
         } else {
-          console.log("Please enter a project title!");
+          console.log("Please enter an application name!");
           return false;
         }
       }
@@ -51,13 +50,26 @@ inquirer
     },
     {
       type: 'input',
-      message: 'Explain Application Usage: ',
+      message: 'Application Purpose: ',
       name: 'usage',
       validate: checkInput => {
         if (checkInput) {
           return true;
         } else {
           console.log("Please explain application usage!");
+          return false;
+        }
+      }
+    },
+    {
+      type: 'input',
+      message: 'What dependencies were used on this project? ',
+      name: 'dependencies',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please enter NA if no dependencies were used!");
           return false;
         }
       }
@@ -208,8 +220,7 @@ inquirer
     },
     {
       //can have this at the bottom since they will most likely be viewing the readme in github, however
-      //if the readme is used and posted outside of github or if that becomes osme type of commong practice
-      //make sure to make adjustments for the future
+      //if the readme is used and posted outside of github or if that becomes some type of common practice
       type: 'input',
       message: 'Please enter your gihub repository URL: ',
       name: 'repository',
@@ -238,10 +249,11 @@ ${maintain(response.maintain)}
 2. [Description](#application-description)
 3. [Installation](#installation-instructions)
 4. [Usage](#application-usage)
-5. [Contribution Guidelines](#contribution-guidelines)
-6. [Testing](#testing-instrutions)
-7. [Known Issues/Errors](#known-issues/errors)
-8. [Questions](#questions)
+5. [Dependencies Used](#dependencies-used)
+6. [Contribution Guidelines](#contribution-guidelines)
+7. [Testing](#testing-instrutions)
+8. [Known Issues/Errors](#known-issues/errors)
+9. [Questions](#questions)
 
 # License Information
 
@@ -269,6 +281,12 @@ ${response.install}
 # Application Usage
 
 ${response.usage}
+
+[Back to Top](#table-of-contents)
+
+# Dependencies Used
+
+${response.dependencies}
 
 [Back to Top](#table-of-contents)
 

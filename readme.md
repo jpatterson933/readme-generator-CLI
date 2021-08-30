@@ -1,18 +1,19 @@
-# Random Password Generator
+# Readme-MD-Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 
 # Table of Contents
 1. [License MIT](#license-information)
 2. [Description](#application-description)
 3. [Installation](#installation-instructions)
 4. [Usage](#application-usage)
-5. [Contribution Guidelines](#contribution-guidelines)
-6. [Testing](#testing-instrutions)
-7. [Known Issues/Errors](#known-issues/errors)
-8. [Questions](#questions)
+5. [Dependencies Used](#dependencies-used)
+6. [Contribution Guidelines](#contribution-guidelines)
+7. [Testing](#testing-instrutions)
+8. [Known Issues/Errors](#known-issues/errors)
+9. [Questions](#questions)
 
 # License Information
 
@@ -27,37 +28,43 @@ this software or any code within this application.
 
 # Application Description
 
-This application will allow users to generate a random passowrd between 8 and 128 characters and allows the users to increase the strenght of their password by including a variety of characters. 
+This application will allow you to quickly create a readme for just about any project or application.
 
 [Back to Top](#table-of-contents)
 
 # Installation Instructions
 
-To install, git clone and open web browser to run. Run an npm install once cloned to ensure application runs smoothly with all dependencies. 
+To install, git clone onto your device. Open a terminal and run an 'npm install' to ensure all dependencies are installed. Once that is accomplished then type in the terminal 'node index' and the application will ask questions. Fill out the questions to generate a readme markdown file.
 
 [Back to Top](#table-of-contents)
 
 # Application Usage
 
-Use this application to generate random passwords.
+The purpose of this application is to generate Readme Mark Down files quickly without the hassle of formatting.
+
+[Back to Top](#table-of-contents)
+
+# Dependencies Used
+
+   "inquirer": "^8.0.0"
 
 [Back to Top](#table-of-contents)
 
 # Contribution Guidelines
 
-If you would like to contribute, please reach out to my email below. If you need help with explanation on some of the features, again, please reach out to my email.
+There are no contribution guidelines.
 
 [Back to Top](#table-of-contents)
 
 # Testing Instrutions
 
-N/A
+NA
 
 [Back to Top](#table-of-contents)
 
 # Known Issues/Errors
 
-N/A
+There are no known issues. Please reach out to my email below if you find any issues are see any improvements that can be made.
 
 [Back to Top](#table-of-contents)
 
@@ -70,5 +77,5 @@ If you have any questions that have not been answered, please send me an email: 
 [Back to Top](#table-of-contents)
 
 ### [jpatterson933](https://github.com/jpatterson933)
-### [Live Application](https://github.com/jpatterson933/ran_password_generator)
-### [GitHub Repository](https://github.com/jpatterson933/ran_password_generator)
+### [Live Application](NA)
+### [GitHub Repository](https://github.com/jpatterson933/readme-generator)
