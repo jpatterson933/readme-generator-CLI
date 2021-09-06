@@ -76,6 +76,19 @@ inquirer
     },
     {
       type: 'input',
+      message: 'What languages were used on this project? ',
+      name: 'languages',
+      validate: checkInput => {
+        if (checkInput) {
+          return true;
+        } else {
+          console.log("Please enter languages used!");
+          return false;
+        }
+      }
+    },
+    {
+      type: 'input',
       message: 'What are your contribution guidelines?',
       name: 'contribution',
       validate: checkInput => {
@@ -129,7 +142,6 @@ inquirer
       }
     },
     {
-      //BONUS - will your application/site be maintainted? 
       type: 'checkbox',
       message: 'Will this application be maintained?',
       name: 'maintain',
@@ -249,11 +261,12 @@ ${maintain(response.maintain)}
 2. [Description](#application-description)
 3. [Installation](#installation-instructions)
 4. [Usage](#application-usage)
-5. [Dependencies Used](#dependencies-used)
-6. [Contribution Guidelines](#contribution-guidelines)
-7. [Testing](#testing-instrutions)
-8. [Known Issues/Errors](#known-issues/errors)
-9. [Questions](#questions)
+5. [Languages Used](#languages-used)
+6. [Dependencies Used](#dependencies-used)
+7. [Contribution Guidelines](#contribution-guidelines)
+8. [Testing](#testing-instrutions)
+9. [Known Issues/Errors](#known-issues/errors)
+10. [Questions](#questions)
 
 # License Information
 
@@ -281,6 +294,12 @@ ${response.install}
 # Application Usage
 
 ${response.usage}
+
+[Back to Top](#table-of-contents)
+
+# Languages Used
+
+${response.languages}
 
 [Back to Top](#table-of-contents)
 
