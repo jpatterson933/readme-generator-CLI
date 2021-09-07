@@ -391,11 +391,10 @@ If you have any questions that have not been answered, please send me an email: 
         badge = "[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)";
         return badge;
       case 'Never':
-        badge = "[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)";
+        badge = "[![No Maintenance Intended](https://unmaintained.tech/badge.svg)](http://unmaintained.tech/)";
         return badge;
       default:
         badge = "[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)";
         return badge;
     }
   }
-  
