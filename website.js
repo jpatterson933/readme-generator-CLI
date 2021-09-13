@@ -260,12 +260,12 @@ inquirer
 
 ${response.stack}
 
-${renderLicense(response.license)}
+${renderLicense(response.lic)}
 
 ${maintain(response.maintain)}
 
 # Table of Contents
-1. [License ${response.license}](#license-information)
+1. [License ${response.lic}](#license-information)
 2. [Description](#website-description)
 3. [Purpose](#website-purpose)
 4. [Languages Used](#languages-used)
@@ -276,9 +276,9 @@ ${maintain(response.maintain)}
 
 # License Information
 
-${renderLicense(response.license)}
+${renderLicense(response.lic)}
 
-${licenseLink(response.license)} Documentation
+${licenseLink(response.lic)} Documentation
 
 Please refer to license documentation for any questions regarding reusing 
 this software or any code within this application.
@@ -332,7 +332,7 @@ If you have any questions that have not been answered, please send me an email: 
 
 ### [${response.username}](https://github.com/${response.username})
 ### [Live Application](${response.website})
-### [GitHub Repository](${response.repository})`
+### [GitHub Repository](${response.repo})`
 
 
         //here we are writing the readme.md file with the readme const else throw an error if not, console.log to the user the proces has finished

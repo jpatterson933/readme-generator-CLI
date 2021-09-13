@@ -1,6 +1,8 @@
-# Readme-MD-Generator
+# oij
 
-Update: 9.13.21 - Currently working on an application based readme generator and a website based readme generator as well as working on updates for both types to better fit what we are trying to accompolish when we reat markdown files for specific types of projects.
+## oij
+
+Front-End,Back-End,Full Stack
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -8,14 +10,13 @@ Update: 9.13.21 - Currently working on an application based readme generator and
 
 # Table of Contents
 1. [License MIT](#license-information)
-2. [Description](#application-description)
-3. [Installation](#installation-instructions)
-4. [Usage](#application-usage)
+2. [Description](#website-description)
+3. [Purpose](#website-purpose)
+4. [Languages Used](#languages-used)
 5. [Dependencies Used](#dependencies-used)
-6. [Contribution Guidelines](#contribution-guidelines)
-7. [Testing](#testing-instrutions)
-8. [Known Issues/Errors](#known-issues/errors)
-9. [Questions](#questions)
+6. [Known Issues/Errors](#known-issues/errors)
+7. [Future Developement](#future-development)
+8. [Questions](#questions)
 
 # License Information
 
@@ -28,56 +29,51 @@ this software or any code within this application.
 
 [Back to Top](#table-of-contents)
 
-# Application Description
+# Website Description
 
-This application will allow you to quickly create a readme for just about any project or application.
-
-[Back to Top](#table-of-contents)
-
-# Installation Instructions
-
-To install, git clone onto your device. Open a terminal and run an 'npm install' to ensure all dependencies are installed. Once that is accomplished then type in the terminal 'node index' and the application will ask questions. Fill out the questions to generate a readme markdown file.
+oij
 
 [Back to Top](#table-of-contents)
 
-# Application Usage
+# Website Purpose
 
-The purpose of this application is to generate Readme Mark Down files quickly without the hassle of formatting.
+oij
 
 [Back to Top](#table-of-contents)
+
+# Languages Used
+
+oij
+
+[Back to Top](#table-of-contents)
+
 
 # Dependencies Used
 
-   "inquirer": "^8.0.0"
-
-[Back to Top](#table-of-contents)
-
-# Contribution Guidelines
-
-There are no contribution guidelines.
-
-[Back to Top](#table-of-contents)
-
-# Testing Instrutions
-
-NA
+oij
 
 [Back to Top](#table-of-contents)
 
 # Known Issues/Errors
 
-There are no known issues. Please reach out to my email below if you find any issues are see any improvements that can be made.
+oij
+
+[Back to Top](#table-of-contents)
+
+# Future Development
+
+oij
 
 [Back to Top](#table-of-contents)
 
 # Questions
 
-If you have any questions that have not been answered, please send me an email: jpatterson933@ucla.edu
+If you have any questions that have not been answered, please send me an email: ijo
 
 ## Checkout My GitHub!
 
 [Back to Top](#table-of-contents)
 
-### [jpatterson933](https://github.com/jpatterson933)
-### [Live Application](NA)
-### [GitHub Repository](https://github.com/jpatterson933/readme-generator)
+### [jjio](https://github.com/jjio)
+### [Live Application](oij)
+### [GitHub Repository](ijo)
