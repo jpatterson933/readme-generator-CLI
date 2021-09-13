@@ -1,3 +1,5 @@
+// TO RUN PROGRAM TYPE 'node index.js' INTO THE TERMINAL //
+
 //console log process.argv to understand our file system structure
 console.log(process.argv)
 //our file system module pulled into our index.js
