@@ -1,4 +1,4 @@
-// TO RUN PROGRAM TYPE 'node index.js' INTO THE TERMINAL //
+// TO RUN PROGRAM TYPE 'node website.js' INTO THE TERMINAL //
 
 //console log process.argv to understand our file system structure
 console.log(process.argv)
@@ -40,8 +40,8 @@ inquirer
         },
         {
             type: 'input',
-            message: 'Enter a Website Description: ',
-            name: 'descript',
+            message: 'What is the purpose of the website? ',
+            name: 'purpose',
             validate: checkInput => {
                 if (checkInput) {
                     return true;
@@ -287,7 +287,7 @@ this software or any code within this application.
 
 # Website Description
 
-${response.descript}
+${response.purpose}
 
 [Back to Top](#table-of-contents)
 
