@@ -29,9 +29,22 @@ inquirer
 
     ])
     //then our reponses to follow
-    .then((res) => {
+    .then((response) => {
+        
+        const key = response.packages.map((package) => {
+            
+            
+            const key = package.npm.toString();
 
-        //all documentation to be put into the readme const
+
+            return `<h1>${key}</h1>`
+        })
+
+        console.log(key.join(" "))
+
+
+
+        //all documentation to be put into an html file
         const html = `<!DOCTYPE html>
         <html lang="en">
         <head>
@@ -41,15 +54,18 @@ inquirer
             <title>Document</title>
         </head>
         <body>
-        <h1>${res.inputTest}</h1>
+        ${key.join("")}
+        
 
             
         </body>
         </html>
         `
 
+        // console.log(response, response.packages, response.packages[0].npm)
 
-        //here we are writing the readme.md file with the readme const else throw an error if not, console.log to the user the proces has finished
+
+        //here we are writing the html file with the html const else throw an error if not, console.log to the user the proces has finished
         fs.writeFile('index.html', html, err => {
             err ? console.log(err) : console.log("Your HTML has been created.");
 
