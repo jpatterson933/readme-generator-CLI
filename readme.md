@@ -1,6 +1,6 @@
 # Readme-MD-Generator
 
-Update: 9.13.21 - Currently working on an application based readme generator and a website based readme generator as well as working on updates for both types to better fit what we are trying to accompolish when we reat markdown files for specific types of projects.
+Update: 5.7.22 - Currently working on an application based readme generator and a website based readme generator as well as working on updates for both types to better fit what we are trying to accompolish when we reat markdown files for specific types of projects. Current task is to create a loop or potential recursive loop that allows the client to add multiple items in one question.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -36,31 +36,31 @@ This application will allow you to quickly create a readme for just about any pr
 
 # Installation Instructions
 
-To install, git clone onto your device. Open a terminal and run an 'npm install' to ensure all dependencies are installed. Once that is accomplished then type in the terminal 'node index' and the application will ask questions. Fill out the questions to generate a readme markdown file.
+To install, git clone onto your device. Open a terminal and run an 'npm install' to ensure all dependencies are installed. Once that is accomplished then type in the terminal 'node index.js' and the application will ask questions. Fill out the questions to generate a readme markdown file. From here, you can copy readme onto your project and you are finished!
 
 [Back to Top](#table-of-contents)
 
 # Application Usage
 
-The purpose of this application is to generate Readme Mark Down files quickly without the hassle of formatting.
+The purpose of this application is to generate Readme Mark Down files quickly without the hassle of formatting. This application will preformat the readme for you all you have to do is fill in the required information.
 
 [Back to Top](#table-of-contents)
 
 # Dependencies Used
 
-   "inquirer": "^8.0.0"
+   "inquirer": "^8.2.4"
 
 [Back to Top](#table-of-contents)
 
 # Contribution Guidelines
 
-There are no contribution guidelines.
+There are no contribution guidelines. However, if you have any feedback please let me know!
 
 [Back to Top](#table-of-contents)
 
 # Testing Instrutions
 
-NA
+NA (Please feel free to add some testing instructions)
 
 [Back to Top](#table-of-contents)
 
@@ -79,5 +79,5 @@ If you have any questions that have not been answered, please send me an email: 
 [Back to Top](#table-of-contents)
 
 ### [jpatterson933](https://github.com/jpatterson933)
-### [Live Application](NA)
+### [There is no live application. This application run on terminal in backend. Front end coming soon.]()
 ### [GitHub Repository](https://github.com/jpatterson933/readme-generator)
