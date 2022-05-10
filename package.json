@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/jpatterson933/Readme-MD-Generator#readme",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "inquirer-loop": "^0.3.0",
+    "inquirer-recursive": "^0.0.7"
   }
 }

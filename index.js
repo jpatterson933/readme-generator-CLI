@@ -6,6 +6,8 @@ console.log(process.argv)
 const fs = require('fs');
 //our inquirer module pulled into our index.js followed by our prompts
 const inquirer = require('inquirer');
+// Recursive
+inquirer.registerPrompt('recursive', require('inquirer-recursive'));
 
 
 
@@ -64,6 +66,7 @@ inquirer
         }
       }
     },
+    // ORIGINAL DEPENDENCY QUESTION
     {
       type: 'input',
       message: 'What dependencies were used on this project? ',
@@ -77,6 +80,7 @@ inquirer
         }
       }
     },
+    // LANGUAGES USED IN PROJECT
     {
       type: 'input',
       message: 'What languages were used on this project? ',
@@ -90,6 +94,7 @@ inquirer
         }
       }
     },
+    // LET USER KNOW WHAT THEY CAN AND CANNOT CONTRIBUTE
     {
       type: 'input',
       message: 'What are your contribution guidelines?',
@@ -103,6 +108,7 @@ inquirer
         }
       }
     },
+    // SPECIFIC TESTING INSTRUCTIONS
     {
       type: 'input',
       message: 'Testing Instructions: ',
@@ -343,61 +349,61 @@ If you have any questions that have not been answered, please send me an email: 
 ### [GitHub Repository](${response.repository})`
 
 
-      //here we are writing the readme.md file with the readme const else throw an error if not, console.log to the user the proces has finished
-      fs.writeFile('readme.md', readme, err => {
-        err ? console.log(err) : console.log("Your ReadMe Markdown file has been created.");
-        
+    //here we are writing the readme.md file with the readme const else throw an error if not, console.log to the user the proces has finished
+    fs.writeFile('readme.md', readme, err => {
+      err ? console.log(err) : console.log("Your ReadMe Markdown file has been created.");
+
     })
-    
+
   });
-  //function to generate license badge, uses switch statement and takes input from checkboxes through the lic parameter
-  function renderLicense (lic) {
-    switch (lic[0]) {
-      case "MIT":
-        badgeLink = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-        return badgeLink;
-      case "Apache 2.0":
-        badgeLink = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-        return badgeLink;
-      case "GPL v3":
-        badgeLink = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-        return badgeLink;
-      default:
-        badgeLink = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-        return badgeLink
-    }
+//function to generate license badge, uses switch statement and takes input from checkboxes through the lic parameter
+function renderLicense(lic) {
+  switch (lic[0]) {
+    case "MIT":
+      badgeLink = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+      return badgeLink;
+    case "Apache 2.0":
+      badgeLink = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+      return badgeLink;
+    case "GPL v3":
+      badgeLink = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+      return badgeLink;
+    default:
+      badgeLink = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+      return badgeLink
   }
-  //function to generate a license link, same parameter as the previous function
-  function licenseLink(lic) {
-    switch(lic[0]) {
-      case "MIT":
-        link = "[MIT License](https://www.mit.edu/~amini/LICENSE.md)";
-        return link;
-      case "Apache 2.0":
-        link = "[Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.txt)";
-        return link;
-      case "GPL v3":
-        link = "[GPL v3 License](https://www.gnu.org/licenses/gpl-3.0.txt)"
-      default:
-        link = "[MIT License](https://www.mit.edu/~amini/LICENSE.md)";
-        return link;
-    }
+}
+//function to generate a license link, same parameter as the previous function
+function licenseLink(lic) {
+  switch (lic[0]) {
+    case "MIT":
+      link = "[MIT License](https://www.mit.edu/~amini/LICENSE.md)";
+      return link;
+    case "Apache 2.0":
+      link = "[Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.txt)";
+      return link;
+    case "GPL v3":
+      link = "[GPL v3 License](https://www.gnu.org/licenses/gpl-3.0.txt)"
+    default:
+      link = "[MIT License](https://www.mit.edu/~amini/LICENSE.md)";
+      return link;
   }
-  //function to display a badge at the top of the readme of whether or not the application will be maintained
-  function maintain(main) {
-    console.log(main[0])
-    switch(main[0]) {
-      case 'Yes':
-        badge = "[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)";
-        return badge;
-      case 'No':
-        badge = "[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)";
-        return badge;
-      case 'Never':
-        badge = "[![No Maintenance Intended](https://unmaintained.tech/badge.svg)](http://unmaintained.tech/)";
-        return badge;
-      default:
-        badge = "[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)";
-        return badge;
-    }
+}
+//function to display a badge at the top of the readme of whether or not the application will be maintained
+function maintain(main) {
+  console.log(main[0])
+  switch (main[0]) {
+    case 'Yes':
+      badge = "[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)";
+      return badge;
+    case 'No':
+      badge = "[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)";
+      return badge;
+    case 'Never':
+      badge = "[![No Maintenance Intended](https://unmaintained.tech/badge.svg)](http://unmaintained.tech/)";
+      return badge;
+    default:
+      badge = "[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)";
+      return badge;
   }
+}
