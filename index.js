@@ -1,4 +1,4 @@
-// TO RUN PROGRAM TYPE 'node index.js' INTO THE TERMINAL //
+// TO RUN PROGRAM TYPE 'node index.js' INTO THE TERMINAL - This is a traditional program readme generator //
 
 //console log process.argv to understand our file system structure
 console.log(process.argv)
