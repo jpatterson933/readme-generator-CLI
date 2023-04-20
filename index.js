@@ -18,109 +18,53 @@ inquirer
       type: 'input',
       message: 'Enter the name of your Application',
       name: 'title',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please enter an application name!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please enter an application name!"), false) }
     },
     {
       type: 'input',
       message: 'Enter a Project Description: ',
       name: 'description',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please enter a project description!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please enter a project description!"), false) }
     },
     {
       type: 'input',
       message: 'Enter Installation Instructions: ',
       name: 'install',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please enter installation instructions!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please enter installation instructions!"), false) }
     },
     {
       type: 'input',
       message: 'Application Purpose: ',
       name: 'usage',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please explain application usage!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please explain application usage!"), false) }
     },
     // ORIGINAL DEPENDENCY QUESTION
     {
       type: 'input',
       message: 'What dependencies were used on this project? ',
       name: 'dependencies',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please enter NA if no dependencies were used!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please enter NA if no dependencies were used!"), false) }
     },
     // LANGUAGES USED IN PROJECT
     {
       type: 'input',
       message: 'What languages were used on this project? ',
       name: 'languages',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please enter languages used!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please enter languages used!"), false) }
     },
     // LET USER KNOW WHAT THEY CAN AND CANNOT CONTRIBUTE
     {
       type: 'input',
       message: 'What are your contribution guidelines?',
       name: 'contribution',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please enter contribution guidelines!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please enter contribution guidelines!"), false) }
     },
     // SPECIFIC TESTING INSTRUCTIONS
     {
       type: 'input',
       message: 'Testing Instructions: ',
       name: 'test',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please enter testing instructions!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please enter testing instructions!"), false) }
     },
     {
       //our license prompt checkbox
@@ -141,14 +85,7 @@ inquirer
           value: 'GPL v3',
         },
       ],
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please choose a license!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please choose a license!"), false) }
     },
     {
       type: 'checkbox',
@@ -168,27 +105,13 @@ inquirer
           value: 'Never',
         },
       ],
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please choose if this project will be maintained!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please choose if this project will be maintained!"), false) }
     },
     {
       type: 'input',
       message: 'Are there any known issues or Errors?',
       name: 'issues',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please enter testing instructions!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please enter testing instructions!"), false) }
     },
     {
       //somewhere here is where I should think about how to let the user choose if there are multiple contributors
@@ -203,41 +126,20 @@ inquirer
       type: 'input',
       message: 'Please enter your GitHub username: ',
       name: 'username',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please enter your gitHub username!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please enter your gitHub username!"), false) }
     },
     {
       type: 'input',
       message: 'What is your email?',
       name: 'email',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please enter your email!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please enter your email!"), false) }
     },
     {
       //will most likely want to put these higher up on the readme so the url application is clickable
       type: 'input',
       message: 'Please enter the full applications URL: ',
       name: 'website',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please enter the applications website!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please enter the applications website!"), false) }
     },
     {
       //can have this at the bottom since they will most likely be viewing the readme in github, however
@@ -245,14 +147,7 @@ inquirer
       type: 'input',
       message: 'Please enter your gihub repository URL: ',
       name: 'repository',
-      validate: checkInput => {
-        if (checkInput) {
-          return true;
-        } else {
-          console.log("Please enter the applications repository url!");
-          return false;
-        }
-      }
+      validate: checkInput => { return checkInput ? true : (console.log("Please enter the applications repository url!"), false) }
     }
   ])
   //then our reponses to follow
